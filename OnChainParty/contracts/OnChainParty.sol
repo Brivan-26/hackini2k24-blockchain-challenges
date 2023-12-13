@@ -26,7 +26,7 @@ contract OnChainParty is Ownable, ReentrancyGuard {
     }
 
     receive() external payable {
-        require(msg.value >= 0.5 ether, "Common, gimme more");
+        require(msg.value >= 0.5 ether, "Common, we're rich, give more!");
         members.push(msg.sender);
         isMember[msg.sender] = true;
 

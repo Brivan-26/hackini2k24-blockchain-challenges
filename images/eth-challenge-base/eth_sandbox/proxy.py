@@ -97,9 +97,9 @@ def proxy(uuid):
     response = Response(resp.content, resp.status_code, resp.raw.headers.items())
     return response
 
-@app.route("/download/solver-pow.py")
+@app.route("/download/docs.pdf")
 def download_solver_pow():
-    file_path = "solver-pow.py"
+    file_path = "blockchain-ctf-intro-docs.pdf"
     return send_file(file_path, as_attachment=True)
 
 if __name__ == "__main__":
