@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-  contactme:
-    build: ./contactMe
+  prayvatevault:
+    build: ./prayVateVault
     # ports:
     #   - "8080:8080"
     environment:
-      - CHALLENGE_ID='458271b3-6f60-4833-a422-397313fb0097'
+      - CHALLENGE_ID='4b0e299e-ff0c-4f9a-b567-eba7895687bc'
       - PUBLIC_IP=localhost
-      - PUBLIC_ENDPOINT=contactme
-      - FLAG=shellmates{U_c0ntRACteD_m3_$$ucce$$sFullY_0x007}
+      - PUBLIC_ENDPOINT=prayvatevault
+      - FLAG=shellmates{pr1v4CY?__0R_PR4Y_tH4t_THeY_w0n7_sEE?}
       - HTTP_PORT=8545
       - PROXY_PORT=8080
       - ENV=production
@@ -18,15 +18,15 @@ services:
         limits:
           cpus: "1.0"
     
-  interstellar:
-    build: ./interstellar
+  shellcoin:
+    build: ./shellcoin
     # ports:
     #   - "8080:8080"
     environment:
-      - CHALLENGE_ID='a9ea0d17-fc4c-44e0-badd-11f8a4a2937f'
+      - CHALLENGE_ID='9180039a-4e22-4a44-8dd2-733e4fef684e'
       - PUBLIC_IP=localhost
-      - PUBLIC_ENDPOINT=interstellar
-      - FLAG=shellmates{1nt3g3R_0v3rfl0o0W_1s_4_Bl0o0o0cKk_H0o0l3}
+      - PUBLIC_ENDPOINT=shellcoin
+      - FLAG=shellmates{the_CONTrACT_1nheRiT3d__4nD_ThE_GR4nDSOn_d1D_n0t__th4T$$_1mProPer_acCes$$_c0nTRoL}
       - HTTP_PORT=8545
       - PROXY_PORT=8080
       - ENV=production
@@ -34,26 +34,6 @@ services:
       resources:
         limits:
           cpus: "1.0"
-
-
-
-  onchainparty:
-    build: ./onChainParty
-    # ports:
-    #   - "8080:8080"
-    environment:
-      - CHALLENGE_ID='b8b2d36a-040e-4258-bdb5-294dd7da440e'
-      - PUBLIC_IP=localhost
-      - PUBLIC_ENDPOINT=onchainparty
-      - FLAG=shellmates{$$H1Ft_l3fT_$$hIft_R1GHT_AND_bitw1sE_fL4g_RIS3}
-      - HTTP_PORT=8545
-      - PROXY_PORT=8080
-      - ENV=production
-    deploy:
-      resources:
-        limits:
-          cpus: "1.0"
-
 
   nginx:
     build: ./nginx
