@@ -1,0 +1,61 @@
+version: "3"
+
+services:
+  contactme:
+    build: ./contactMe
+    # ports:
+    #   - "8080:8080"
+    environment:
+      - CHALLENGE_ID='458271b3-6f60-4833-a422-397313fb0097'
+      - PUBLIC_IP=localhost
+      - PUBLIC_ENDPOINT=contactme
+      - FLAG=shellmates{U_c0ntRACteD_m3_$$ucce$$sFullY_0x007}
+      - HTTP_PORT=8545
+      - PROXY_PORT=8080
+      - ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+    
+  interstellar:
+    build: ./interstellar
+    # ports:
+    #   - "8080:8080"
+    environment:
+      - CHALLENGE_ID='a9ea0d17-fc4c-44e0-badd-11f8a4a2937f'
+      - PUBLIC_IP=localhost
+      - PUBLIC_ENDPOINT=interstellar
+      - FLAG=shellmates{1nt3g3R_0v3rfl0o0W_1s_4_Bl0o0o0cKk_H0o0l3}
+      - HTTP_PORT=8545
+      - PROXY_PORT=8080
+      - ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+
+
+
+  onchainparty:
+    build: ./onChainParty
+    # ports:
+    #   - "8080:8080"
+    environment:
+      - CHALLENGE_ID='b8b2d36a-040e-4258-bdb5-294dd7da440e'
+      - PUBLIC_IP=localhost
+      - PUBLIC_ENDPOINT=onchainparty
+      - FLAG=shellmates{$$H1Ft_l3fT_$$hIft_R1GHT_AND_bitw1sE_fL4g_RIS3}
+      - HTTP_PORT=8545
+      - PROXY_PORT=8080
+      - ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+
+
+  nginx:
+    build: ./nginx
+    ports:
+    - 80:80

@@ -108,7 +108,7 @@
     <script>
         // Check if data exists in the session on page load
         document.addEventListener('DOMContentLoaded', async function () {
-            const response = await fetch('/instance/data');
+            const response = await fetch(`${window.location.href}instance/data`);
             const data = await response.json();
             if (Object.keys(data).length > 0) {
                 displayCredentials(data);
@@ -119,7 +119,7 @@
             showLoading();
             var ticket = document.getElementById("ticketInput").value;
             try {
-                const response = await fetch(`/ticket/${ticket}`);
+                const response = await fetch(`${window.location.href}ticket/${ticket}`);
                 const data = await response.json();
                 if (response.ok) {
                     showSuccess(data.message);
@@ -137,7 +137,7 @@
             showLoading();
             let response = null
             try {
-                response = await fetch(`/${action}`, { method: 'GET' });
+                response = await fetch(`${window.location.href}${action}`, { method: 'GET' });
                 const data = await response.json();
 
                 if (response.ok) {
