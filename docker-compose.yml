@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-  prayvatevault:
-    build: ./prayVateVault
+  spacecraftorigins:
+    build: ./spacecraftOrigins
     # ports:
     #   - "8080:8080"
     environment:
-      - CHALLENGE_ID='4b0e299e-ff0c-4f9a-b567-eba7895687bc'
-      - PUBLIC_IP=localhost
-      - PUBLIC_ENDPOINT=prayvatevault
-      - FLAG=shellmates{pr1v4CY?__0R_PR4Y_tH4t_THeY_w0n7_sEE?}
+      - CHALLENGE_ID='01582d9d-1021-43bd-b210-031fbe1ea1ab'
+      - PUBLIC_IP=34.163.120.130
+      - PUBLIC_ENDPOINT=spacecraftorigins
+      - FLAG=shellmates{he4v3NLy_0RiG1n4Ted_Tr4N$$4ct1On}
       - HTTP_PORT=8545
       - PROXY_PORT=8080
       - ENV=production
@@ -18,15 +18,15 @@ services:
         limits:
           cpus: "1.0"
     
-  shellcoin:
-    build: ./shellcoin
+  stupidcontract:
+    build: ./stupidContract
     # ports:
     #   - "8080:8080"
     environment:
-      - CHALLENGE_ID='9180039a-4e22-4a44-8dd2-733e4fef684e'
-      - PUBLIC_IP=localhost
-      - PUBLIC_ENDPOINT=shellcoin
-      - FLAG=shellmates{the_CONTrACT_1nheRiT3d__4nD_ThE_GR4nDSOn_d1D_n0t__th4T$$_1mProPer_acCes$$_c0nTRoL}
+      - CHALLENGE_ID='78c13866-8569-4ced-aca2-d9717c44a833'
+      - PUBLIC_IP=34.163.120.130
+      - PUBLIC_ENDPOINT=stupidcontract
+      - FLAG=shellmates{y0u_S33_evm_0PC0d3s_4r3_L1KE_4S$$EmBly}
       - HTTP_PORT=8545
       - PROXY_PORT=8080
       - ENV=production
